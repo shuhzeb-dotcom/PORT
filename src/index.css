@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Work+Sans:wght@400;700&family=DM+Sans:wght@400;700&family=Space+Grotesk:wght@400;700&family=Manrope:wght@400;700&family=Roboto+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;700&family=Courier+Prime:wght@400;700&family=Source+Code+Pro:wght@400;700&family=Overpass+Mono:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Futura';
+  src: local('Futura Bold'), local('Futura-Bold');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scrolling behavior */
+* {
+  scroll-behavior: auto;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out forwards;
+}
